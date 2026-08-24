@@ -21,13 +21,13 @@ This repository does **not** contain application source code. It hosts public di
 | [`README.md`](README.md) | Installation and update guidance |
 | [`update-manifest.json`](update-manifest.json) | Version metadata for in-app update checks |
 | [`CHANGELOG.md`](CHANGELOG.md) | Public release history (English) |
-| [**GitHub Releases**](https://github.com/HailRase/omnicall-releases/releases) | Signed-off installers per version |
+| [**GitHub Releases**](https://github.com/softomnitel/omnicall-releases/releases) | Signed-off installers per version |
 
 ---
 
 ## Downloads
 
-**Latest release:** [github.com/HailRase/omnicall-releases/releases/latest](https://github.com/HailRase/omnicall-releases/releases/latest)
+**Latest release:** [github.com/softomnitel/omnicall-releases/releases/latest](https://github.com/softomnitel/omnicall-releases/releases/latest)
 
 | Platform | File | Notes |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ chmod +x OmniCall-*-linux-x86_64.AppImage
 
 ## Release Notes
 
-Each [GitHub Release](https://github.com/HailRase/omnicall-releases/releases) includes structured notes: highlights, added features, changes, and fixes.
+Each [GitHub Release](https://github.com/softomnitel/omnicall-releases/releases) includes structured notes: highlights, added features, changes, and fixes.
 
 A full version history is also available in [`CHANGELOG.md`](CHANGELOG.md).
 
@@ -86,7 +86,7 @@ The manifest exposes `latestVersion`, `downloadUrl`, per-platform installer URLs
 ## Support / Feedback
 
 - **PBX and SIP account setup** — contact your telephony administrator
-- **Client installation** — use this page and the [Releases](https://github.com/HailRase/omnicall-releases/releases) page
+- **Client installation** — use this page and the [Releases](https://github.com/softomnitel/omnicall-releases/releases) page
 - **Product issues** — report through your organization's OmniCall support channel
 
 ---
