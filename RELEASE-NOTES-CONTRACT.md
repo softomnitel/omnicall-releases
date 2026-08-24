@@ -1,6 +1,6 @@
 # OmniCall Distribution Release Notes Contract
 
-Public release notes for [HailRase/omnicall-releases](https://github.com/HailRase/omnicall-releases) are generated from `distribution/CHANGELOG.md` in the publishing pipeline.
+Public release notes for [softomnitel/omnicall-releases](https://github.com/softomnitel/omnicall-releases) are generated from `distribution/CHANGELOG.md` in the publishing pipeline.
 
 ## Source of truth
 
@@ -40,7 +40,7 @@ During a release cut, update **both** changelogs. Public bullets must be user-fa
 - Linux: `OmniCall-X.Y.Z-linux-x86_64.AppImage`, `OmniCall-X.Y.Z-linux-amd64.deb`
 
 ### Updates
-In-app update checks read [`update-manifest.json`](https://github.com/HailRase/omnicall-releases/blob/main/update-manifest.json) on `main`.
+In-app update checks read [`update-manifest.json`](https://github.com/softomnitel/omnicall-releases/blob/main/update-manifest.json) on `main`.
 ```
 
 Sections with no items are omitted. If no changelog entry exists for a version, the fallback body is:
@@ -72,11 +72,11 @@ DISTRIBUTION_GITHUB_TOKEN=<pat> node scripts/backfill-distribution-release-notes
 DISTRIBUTION_GITHUB_TOKEN=<pat> node scripts/backfill-distribution-release-notes.mjs v0.1.0
 ```
 
-Token needs **Contents: read and write** on `HailRase/omnicall-releases`.
+Token needs **Contents: read and write** on `softomnitel/omnicall-releases`.
 
 ## Publishing checklist
 
 1. Add `## [X.Y.Z] - YYYY-MM-DD` to `distribution/CHANGELOG.md` (English, user-facing).
 2. Bump `package.json`, sync manifest, commit, tag `vX.Y.Z`, push.
 3. CI uploads installers and writes the release body from the changelog.
-4. Verify [Releases](https://github.com/HailRase/omnicall-releases/releases) and raw [manifest](https://raw.githubusercontent.com/HailRase/omnicall-releases/main/update-manifest.json).
+4. Verify [Releases](https://github.com/softomnitel/omnicall-releases/releases) and raw [manifest](https://raw.githubusercontent.com/softomnitel/omnicall-releases/main/update-manifest.json).
