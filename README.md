@@ -21,14 +21,14 @@ This repository does **not** contain application source code. It hosts public di
 | [`README.md`](README.md) | Installation and update guidance |
 | [`update-manifest.json`](update-manifest.json) | Version metadata for in-app update checks |
 | [`CHANGELOG.md`](CHANGELOG.md) | Public release history (English) |
-| [**GitHub Releases**](https://github.com/softomnitel/omnicall-releases/releases) | Canonical installers per version |
+| [**GitHub Releases**](https://github.com/HailRase/omnicall-releases/releases) | Canonical installers per version |
 | [**Profile mirror**](https://github.com/softomnitel/omnicall-releases/releases) | Same installers on the SoftOmniTel GitHub profile |
 
 ---
 
 ## Downloads
 
-**Latest release:** [github.com/softomnitel/omnicall-releases/releases/latest](https://github.com/softomnitel/omnicall-releases/releases/latest)
+**Latest release:** [github.com/HailRase/omnicall-releases/releases/latest](https://github.com/HailRase/omnicall-releases/releases/latest)
 
 | Platform | File | Notes |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ chmod +x OmniCall-*-linux-x86_64.AppImage
 
 ## Release Notes
 
-Each [GitHub Release](https://github.com/softomnitel/omnicall-releases/releases) includes structured notes: highlights, added features, changes, and fixes.
+Each [GitHub Release](https://github.com/HailRase/omnicall-releases/releases) includes structured notes: highlights, added features, changes, and fixes.
 
 A full version history is also available in [`CHANGELOG.md`](CHANGELOG.md).
 
@@ -74,10 +74,10 @@ A full version history is also available in [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Updates
 
-OmniCall checks for updates using [`update-manifest.json`](https://raw.githubusercontent.com/softomnitel/omnicall-releases/main/update-manifest.json) on the `main` branch of **softomnitel/omnicall-releases**.
+OmniCall checks for updates using [`update-manifest.json`](https://raw.githubusercontent.com/HailRase/omnicall-releases/main/update-manifest.json) on the `main` branch of **HailRase/omnicall-releases**.
 
 - **In the app:** Settings → General → About → **Check for updates**
-- When a newer version is available, the app opens the latest **softomnitel** release download page
+- When a newer version is available, the app opens the latest **HailRase** release download page
 - Updates are **manual** — the app does not auto-install new versions
 - Identical installer files are also published to [`softomnitel/omnicall-releases`](https://github.com/softomnitel/omnicall-releases/releases) for profile visibility. In-app checks do not use that mirror.
 
@@ -88,7 +88,7 @@ The manifest exposes `latestVersion`, `downloadUrl`, per-platform installer URLs
 ## Support / Feedback
 
 - **PBX and SIP account setup** — contact your telephony administrator
-- **Client installation** — use this page and the [Releases](https://github.com/softomnitel/omnicall-releases/releases) page
+- **Client installation** — use this page and the [Releases](https://github.com/HailRase/omnicall-releases/releases) page
 - **Product issues** — report through your organization's OmniCall support channel
 
 ---

@@ -11,7 +11,7 @@ Versioning: SemVer. Git tag: `v<version>`.
 
 ### Changed
 
-- The same installers are also published on the SoftOmniTel GitHub profile. In-app update checks continue to use softomnitel/omnicall-releases.
+- The same installers are also published on the SoftOmniTel GitHub profile. In-app update checks continue to use HailRase/omnicall-releases.
 
 ## [1.4.1] - 2026-08-07
 
