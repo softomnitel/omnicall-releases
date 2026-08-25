@@ -1,6 +1,6 @@
 # OmniCall Distribution Release Notes Contract
 
-Public release notes for [softomnitel/omnicall-releases](https://github.com/softomnitel/omnicall-releases) are generated from `distribution/CHANGELOG.md` in the publishing pipeline.
+Public release notes for [HailRase/omnicall-releases](https://github.com/HailRase/omnicall-releases) (canonical) are generated from `distribution/CHANGELOG.md` in the publishing pipeline. The same body is copied to the [softomnitel/omnicall-releases](https://github.com/softomnitel/omnicall-releases) profile mirror.
 
 ## Source of truth
 
@@ -40,7 +40,7 @@ During a release cut, update **both** changelogs. Public bullets must be user-fa
 - Linux: `OmniCall-X.Y.Z-linux-x86_64.AppImage`, `OmniCall-X.Y.Z-linux-amd64.deb`
 
 ### Updates
-In-app update checks read [`update-manifest.json`](https://github.com/softomnitel/omnicall-releases/blob/main/update-manifest.json) on `main`.
+In-app update checks read [`update-manifest.json`](https://github.com/HailRase/omnicall-releases/blob/main/update-manifest.json) on `main`.
 ```
 
 Sections with no items are omitted. If no changelog entry exists for a version, the fallback body is:
@@ -53,11 +53,12 @@ Releases are created and updated by CI in the private publishing repository when
 
 | Step | Script | When |
 | --- | --- | --- |
-| Create release + upload installers | `scripts/publish-distribution-release.mjs` | Each platform build job |
+| Create release + upload installers | `scripts/publish-distribution-release.mjs` | Each platform build job (canonical + mirrors) |
 | Set final release body | `scripts/update-distribution-release-notes.mjs` | `finalize-distribution` job |
 | Backfill historical bodies | `scripts/backfill-distribution-release-notes.mjs` | Manual, one-time or on demand |
+| Copy canonical Releases to mirrors | `scripts/mirror-distribution-releases.mjs` | Manual / `mirror-distribution.yml` |
 
-Required environment variables: `DISTRIBUTION_GITHUB_TOKEN` (or `OMNICALL_RELEASES_TOKEN`), `RELEASE_TAG` (e.g. `v0.1.3`).
+Required environment variables: `DISTRIBUTION_GITHUB_TOKEN` (or `OMNICALL_RELEASES_TOKEN`), `RELEASE_TAG` (e.g. `v0.1.3`). Optional: `DISTRIBUTION_MIRROR_GITHUB_TOKEN` when the canonical PAT cannot write `softomnitel/omnicall-releases`.
 
 ## Manual backfill
 
@@ -72,11 +73,11 @@ DISTRIBUTION_GITHUB_TOKEN=<pat> node scripts/backfill-distribution-release-notes
 DISTRIBUTION_GITHUB_TOKEN=<pat> node scripts/backfill-distribution-release-notes.mjs v0.1.0
 ```
 
-Token needs **Contents: read and write** on `softomnitel/omnicall-releases`.
+Token needs **Contents: read and write** on `HailRase/omnicall-releases`. Mirror notes update when the token (or `DISTRIBUTION_MIRROR_GITHUB_TOKEN`) can write `softomnitel/omnicall-releases`.
 
 ## Publishing checklist
 
 1. Add `## [X.Y.Z] - YYYY-MM-DD` to `distribution/CHANGELOG.md` (English, user-facing).
 2. Bump `package.json`, sync manifest, commit, tag `vX.Y.Z`, push.
 3. CI uploads installers and writes the release body from the changelog.
-4. Verify [Releases](https://github.com/softomnitel/omnicall-releases/releases) and raw [manifest](https://raw.githubusercontent.com/softomnitel/omnicall-releases/main/update-manifest.json).
+4. Verify [canonical Releases](https://github.com/HailRase/omnicall-releases/releases), [mirror Releases](https://github.com/softomnitel/omnicall-releases/releases), and raw [manifest](https://raw.githubusercontent.com/HailRase/omnicall-releases/main/update-manifest.json).

@@ -7,13 +7,17 @@ Versioning: SemVer. Git tag: `v<version>`.
 
 ## [Unreleased]
 
+## [1.4.2] - 2026-08-25
+
+### Changed
+
+- The same installers are also published on the SoftOmniTel GitHub profile. In-app update checks continue to use HailRase/omnicall-releases.
+
 ## [1.4.1] - 2026-08-07
 
 ### Fixed
 
-- Changing the interface language applies immediately and stays selected; the
-  previous Settings refresh loop that could revert the language and spam theme /
-  SDK gateway updates is fixed.
+- Changing the interface language applies immediately and stays selected; the previous Settings refresh loop that could revert the language and spam theme / SDK gateway updates is fixed.
 
 ## [1.4.0] - 2026-08-06
 
