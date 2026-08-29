@@ -7,6 +7,34 @@ Versioning: SemVer. Git tag: `v<version>`.
 
 ## [Unreleased]
 
+## [1.7.0] - 2026-08-29
+
+### Added
+
+- Settings → OmniCall Kit → trusted site: optional CRM auto-launch in the
+  system default browser when that site has no authenticated SDK connection.
+  Off by default. Runs on queue, direct, and internal incoming calls, and on outgoing calls.
+- Launch OmniCall when you sign in to this computer (Settings → General). Off by
+  default. Unavailable in development builds. Separate from SIP auto-register.
+- Trusted sites danger zone in OmniCall Kit settings: optionally skip pairing
+  confirmation and skip sign-in confirmation for a chosen site (both off by
+  default). Site permissions and Trusted sites membership still apply.
+
+## [1.6.0] - 2026-08-28
+
+### Added
+
+- Launch OmniCall when you sign in to this computer (Settings → General). Off by
+  default. Unavailable in development builds. Separate from SIP auto-register.
+
+## [1.5.0] - 2026-08-28
+
+### Added
+
+- Trusted sites danger zone in OmniCall Kit settings: optionally skip pairing confirmation
+  and skip sign-in confirmation for a chosen site (both off by default). Site permissions
+  and Trusted sites membership still apply.
+
 ## [1.4.2] - 2026-08-25
 
 ### Changed
