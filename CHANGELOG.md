@@ -7,6 +7,12 @@ Versioning: SemVer. Git tag: `v<version>`.
 
 ## [Unreleased]
 
+## [1.8.1] - 2026-09-04
+
+### Fixed
+
+- Windows: "Launch at login" stays on after you enable it in Settings.
+
 ## [1.8.0] - 2026-09-04
 
 ### Added
