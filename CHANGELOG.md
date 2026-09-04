@@ -7,6 +7,32 @@ Versioning: SemVer. Git tag: `v<version>`.
 
 ## [Unreleased]
 
+## [1.8.0] - 2026-09-04
+
+### Added
+
+- Notification bell over the user avatar: quick list of recent notifications
+  with unread badge and a link to open Notification Center.
+- Setting to show or hide popup notifications while keeping the notification
+  journal.
+- Confirmation dialog before quitting the app; Cancel keeps OmniCall running.
+- Fast sign-in from the idle dialpad: pick a saved OCP account when profiles
+  exist, or open Account settings when the list is empty.
+
+### Changed
+
+- CRM integrations connected via OmniCall SDK now receive full caller phone
+  numbers and display names (no asterisk masks). Access still requires a
+  trusted site and pairing.
+- New installs default notification placement to top-right; existing choices
+  are kept.
+
+### Fixed
+
+- Installers keep a stable product identity across platforms so upgrades
+  replace the same OmniCall install instead of creating duplicates.
+- Dialog close (X) stays in the top-right corner of modals.
+
 ## [1.7.0] - 2026-08-29
 
 ### Added
