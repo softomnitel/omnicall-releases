@@ -7,6 +7,13 @@ Versioning: SemVer. Git tag: `v<version>`.
 
 ## [Unreleased]
 
+## [1.8.2] - 2026-09-07
+
+### Changed
+
+- After you sign in, signed-out and cold-start screens keep the last operator
+  language on this PC. First launch (nobody has signed in yet) stays Russian.
+
 ## [1.8.1] - 2026-09-04
 
 ### Fixed
