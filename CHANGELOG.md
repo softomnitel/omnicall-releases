@@ -7,6 +7,18 @@ Versioning: SemVer. Git tag: `v<version>`.
 
 ## [Unreleased]
 
+## [1.9.0] - 2026-10-05
+
+### Added
+
+- On incoming queue calls with quality rating enabled, hanging up sends the
+  caller to the rating IVR instead of dropping the call.
+
+### Fixed
+
+- After a successful transfer, the operator SIP session ends so OCP no longer
+  leaves the agent in a talking state.
+
 ## [1.8.2] - 2026-09-07
 
 ### Changed
